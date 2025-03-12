@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Pronunciation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .grid-item {
+            background-color: #ffd166;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .grid-item:hover {
+            background-color: #ef476f;
+            color: white;
+        }
+        .phonetic {
+            font-size: 26px;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+    <script>
+        function playCombinedAudio(letter) {
+            let letterAudio = document.getElementById("audio_" + letter);
+            let phoneticAudio = document.getElementById("audio_" + letter + "_phonetic");
+
+            // Play the letter audio first, then the phonetic sound
+            letterAudio.play();
+            letterAudio.onended = function () {
+                phoneticAudio.play();
+            };
+        }
+    </script>
+</head>
+<body>
+    <h2>Click a Letter to Hear the Pronunciation</h2>
+    <div class="grid-container">
+
+        <!-- A–Z with Combined Audio Playback -->
+        <div class="grid-item" onclick="playCombinedAudio('A')">
+            Aa <span class="phonetic">ei</span>
+        </div>
+        <audio id="audio_A" src="A.mp3"></audio>
+        <audio id="audio_A_phonetic" src="A_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('B')">
+            Bb <span class="phonetic">bi</span>
+        </div>
+        <audio id="audio_B" src="B.mp3"></audio>
+        <audio id="audio_B_phonetic" src="B_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('C')">
+            Cc <span class="phonetic">ci</span>
+        </div>
+        <audio id="audio_C" src="C.mp3"></audio>
+        <audio id="audio_C_phonetic" src="C_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('D')">
+            Dd <span class="phonetic">di</span>
+        </div>
+        <audio id="audio_D" src="D.mp3"></audio>
+        <audio id="audio_D_phonetic" src="D_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('E')">
+            Ee <span class="phonetic">i</span>
+        </div>
+        <audio id="audio_E" src="E.mp3"></audio>
+        <audio id="audio_E_phonetic" src="E_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('F')">
+            Ff <span class="phonetic">ef</span>
+        </div>
+        <audio id="audio_F" src="F.mp3"></audio>
+        <audio id="audio_F_phonetic" src="F_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('G')">
+            Gg <span class="phonetic">yi</span>
+        </div>
+        <audio id="audio_G" src="G.mp3"></audio>
+        <audio id="audio_G_phonetic" src="G_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('H')">
+            Hh <span class="phonetic">eich</span>
+        </div>
+        <audio id="audio_H" src="H.mp3"></audio>
+        <audio id="audio_H_phonetic" src="H_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('I')">
+            Ii <span class="phonetic">ai</span>
+        </div>
+        <audio id="audio_I" src="I.mp3"></audio>
+        <audio id="audio_I_phonetic" src="I_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('J')">
+            Jj <span class="phonetic">jei</span>
+        </div>
+        <audio id="audio_J" src="J.mp3"></audio>
+        <audio id="audio_J_phonetic" src="J_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('K')">
+            Kk <span class="phonetic">kei</span>
+        </div>
+        <audio id="audio_K" src="K.mp3"></audio>
+        <audio id="audio_K_phonetic" src="K_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('L')">
+            Ll <span class="phonetic">el</span>
+        </div>
+        <audio id="audio_L" src="L.mp3"></audio>
+        <audio id="audio_L_phonetic" src="L_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('M')">
+            Mm <span class="phonetic">em</span>
+        </div>
+        <audio id="audio_M" src="M.mp3"></audio>
+        <audio id="audio_M_phonetic" src="M_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('N')">
+            Nn <span class="phonetic">en</span>
+        </div>
+        <audio id="audio_N" src="N.mp3"></audio>
+        <audio id="audio_N_phonetic" src="N_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('O')">
+            Oo <span class="phonetic">ou</span>
+        </div>
+        <audio id="audio_O" src="O.mp3"></audio>
+        <audio id="audio_O_phonetic" src="O_phonetic.mp3"></audio>
+
+        <div class="grid-item" onclick="playCombinedAudio('P')">
+            Pp <span class="phonetic">pi</span>
+        </div>
+        <audio id="audio_P" src="P.mp3"></audio>
+        <audio id="audio_P_phonetic" src="P_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('Q')">
+            Qq <span class="phonetic">kiu</span>
+        </div>
+        <audio id="audio_Q" src="Q.mp3"></audio>
+        <audio id="audio_Q_phonetic" src="Q_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('R')">
+            Rr <span class="phonetic">ar</span>
+        </div>
+        <audio id="audio_R" src="R.mp3"></audio>
+        <audio id="audio_R_phonetic" src="R_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('S')">
+            Ss <span class="phonetic">es</span>
+        </div>
+        <audio id="audio_S" src="S.mp3"></audio>
+        <audio id="audio_S_phonetic" src="S_phonetic.mp3"></audio>
+
+
+	<div class="grid-item" onclick="playCombinedAudio('T')">
+            Tt <span class="phonetic">ti</span>
+        </div>
+        <audio id="audio_T" src="T.mp3"></audio>
+        <audio id="audio_T_phonetic" src="T_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('U')">
+            Uu <span class="phonetic">iu</span>
+        </div>
+        <audio id="audio_U" src="U.mp3"></audio>
+        <audio id="audio_U_phonetic" src="U_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('V')">
+            Vv <span class="phonetic">vi</span>
+        </div>
+        <audio id="audio_V" src="V.mp3"></audio>
+        <audio id="audio_V_phonetic" src="V_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('W')">
+            Ww <span class="phonetic">dabliu</span>
+        </div>
+        <audio id="audio_W" src="W.mp3"></audio>
+        <audio id="audio_W_phonetic" src="W_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('X')">
+            Xx <span class="phonetic">ex</span>
+        </div>
+        <audio id="audio_X" src="X.mp3"></audio>
+        <audio id="audio_X_phonetic" src="X_phonetic.mp3"></audio>
+	
+	<div class="grid-item" onclick="playCombinedAudio('Y')">
+            Yy <span class="phonetic">uai</span>
+        </div>
+        <audio id="audio_Y" src="Y.mp3"></audio>
+        <audio id="audio_Y_phonetic" src="Y_phonetic.mp3"></audio>
+
+	<div class="grid-item" onclick="playCombinedAudio('Z')">
+            Zz <span class="phonetic">zi</span>
+        </div>
+        <audio id="audio_Z" src="Z.mp3"></audio>
+        <audio id="audio_Z_phonetic" src="Z_phonetic.mp3"></audio>
+    </div>
+</body>
+</html>
